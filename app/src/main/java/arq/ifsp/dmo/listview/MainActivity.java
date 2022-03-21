@@ -1,5 +1,6 @@
 package arq.ifsp.dmo.listview;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -30,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        if(savedInstanceState != null){
+            estado = savedInstanceState.getString(ESTADO_SELECIONADO);
+            btnSelecionar.setText(estado);
+        }
     }
 
     @Override
@@ -42,5 +48,12 @@ public class MainActivity extends AppCompatActivity {
                 btnSelecionar.setText(estado);
             }
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString(ESTADO_SELECIONADO, estado);
     }
 }
