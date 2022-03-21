@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ListView</string>
+    <string name="selecionar_um_estado">Selecionar um estado</string>
+    <string-array name="estados">
+        <item>Espirito Santo</item>
+        <item>Minas Gerais</item>
+        <item>Rio de Janeiro</item>
+        <item>São Paulo</item>
+    </string-array>
+</resources>
